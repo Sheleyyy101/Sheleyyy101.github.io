@@ -39,25 +39,6 @@
             color: #007BFF;
             text-decoration: none;
         }
-        .notification {
-            background: white;
-            padding: 10px;
-            border-radius: 5px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .play-button {
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .play-button:hover {
-            background-color: #0056b3;
-        }
     </style>
 </head>
 <body>
@@ -67,10 +48,6 @@
         <div class="right"
         <p style="color: brown;">-Lý Bạch-</p>
 </div>
-        <div class="notification">
-            <p>Đọc thơ Tĩnh Dạ Tứ (tiếng Trung).</p>
-            <button class="play-button" onclick="playAudio()">Đọc</button>
-        </div>
         <h3>I. Tác giả, tác phẩm</h3>
         <h6>1. Tiểu sử nhà thơ Lý Bạch</h6>
         <p>- Lý Bạch (701-762) tự Thái Bạch, quê ở Lũng Tây (nay thuộc tỉnh Cam Túc)</p>
@@ -91,15 +68,6 @@
             <p><a href="MySecondHTML.html">Đọc tiếp</a></p>
             <p><a href="#back">Đọc lại</a></p>
         </div>
-        <audio id="myAudio">
-            <source src="/audio/test.mp3" type="audio/mpeg">
-        </audio>
-        <script>
-            function playAudio() {
-                var audio = document.getElementById('myAudio');
-                audio.play();
-            }
-        </script>
     </div>
 </body>
 </html>
