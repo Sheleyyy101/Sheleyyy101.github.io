@@ -37,6 +37,24 @@
         .question {
             margin-bottom: 15px;
         }
+        .notification {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .play-button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .play-button:hover {
+            background-color: #0056b3;
     </style>
 </head>
 <body>
@@ -61,6 +79,19 @@
             Ngẩng đầu ngắm trăng sáng,<br>
             Cúi đầu nhớ cố hương.<br>
         </p>
+        <div class="notification">
+            <p>Đọc thơ Tĩnh Dạ Tứ (tiếng Trung).</p>
+            <button class="play-button" onclick="playAudio()">Đọc</button>
+        </div>
+        <audio id="myAudio">
+            <source src="/audio/test.mp3" type="audio/mpeg">
+        </audio>
+        <script>
+            function playAudio() {
+                var audio = document.getElementById('myAudio');
+                audio.play();
+            }
+        </script>        
     </div>
 <body>
     <h1>Câu hỏi về Lý Bạch</h1>
@@ -90,7 +121,7 @@
         </div>
 
         <input type="submit" value="Submit">
-        
+          <p><a href="MyFirstHTML.html">Quay lại.</a></p>
     </form>
 
     <script>
@@ -121,6 +152,5 @@
             return false; // Prevent form submission for demonstration purposes
         }
     </script>
-      <p><a href="MyFirstHTML.html">Quay lại.</a></p>
 </body>
 </html>
