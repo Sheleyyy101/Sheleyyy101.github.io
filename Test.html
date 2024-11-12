@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tĩnh Dạ Tứ - Lý Bạch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .correct-answer {
+            color: green;
+            font-weight: bold;
+        }
+        .incorrect-answer {
+            color: red;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tĩnh Dạ Tứ</h1>
+        <p>Lý Bạch</p>
+        <p>
+            床前明月光，<br>
+            疑是地上霜。<br>
+            举头望明月，<br>
+            低头思故乡。<br>
+        </p>
+        <p>
+            Sàng tiền minh nguyệt quang,<br>
+            Nghi thị địa thượng sương.<br>
+            Cử đầu vọng minh nguyệt,<br>
+            Đê đầu tư cố hương.<br>
+        </p>
+        <p>
+            Ánh trăng chiếu sáng giường,<br>
+            Ngỡ là sương trên mặt đất.<br>
+            Ngẩng đầu ngắm trăng sáng,<br>
+            Cúi đầu nhớ cố hương.<br>
+        </p>
+    </div>
+<body>
+    <h1>Câu hỏi về Lý Bạch</h1>
+    <form id="quizForm" onsubmit="return checkAnswers()">
+        <div class="question">
+            <p>1. Lý Bạch sinh vào năm nào?</p>
+            <label><input type="radio" name="q1" value="701"> 701</label><br>
+            <label><input type="radio" name="q1" value="702"> 702</label><br>
+            <label><input type="radio" name="q1" value="703"> 703</label><br>
+            <label><input type="radio" name="q1" value="704"> 704</label><br>
+        </div>
+        
+        <div class="question">
+            <p>2. Tác phẩm nổi tiếng nhất của Lý Bạch là gì?</p>
+            <label><input type="radio" name="q2" value="Tĩnh dạ tứ"> Tĩnh dạ tứ</label><br>
+            <label><input type="radio" name="q2" value="Đường thi"> Đường thi</label><br>
+            <label><input type="radio" name="q2" value="Xuân giang hoa nguyệt dạ"> Xuân giang hoa nguyệt dạ</label><br>
+            <label><input type="radio" name="q2" value="Hoàng Hạc Lâu"> Hoàng Hạc Lâu</label><br>
+        </div>
+
+        <div class="question">
+            <p>3. Lý Bạch qua đời vào năm nào?</p>
+            <label><input type="radio" name="q3" value="762"> 762</label><br>
+            <label><input type="radio" name="q3" value="763"> 763</label><br>
+            <label><input type="radio" name="q3" value="764"> 764</label><br>
+            <label><input type="radio" name="q3" value="765"> 765</label><br>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function checkAnswers() {
+            var correctAnswers = {
+                q1: "701",
+                q2: "Tĩnh dạ tứ",
+                q3: "762"
+            };
+
+            for (var question in correctAnswers) {
+                var radios = document.getElementsByName(question);
+
+                for (var i = 0; i < radios.length; i++) {
+                    var label = radios[i].parentNode;
+
+                    if (radios[i].checked) {
+                        if (radios[i].value === correctAnswers[question]) {
+                            label.classList.add("correct-answer"); // Highlight correct selected answer in green
+                        } else {
+                            label.classList.add("incorrect-answer"); // Highlight selected incorrect answer in red
+                        }
+                    } else if (radios[i].value === correctAnswers[question]) {
+                        label.classList.add("correct-answer"); // Highlight correct answer in green if not selected
+                    }
+                }
+            }
+            return false; // Prevent form submission for demonstration purposes
+        }
+    </script>
+</body>
+</html>
